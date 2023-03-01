@@ -1,7 +1,11 @@
-/* CardList.Container = styled.div`
+.container{
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
   grid-row-gap: 2rem;
   grid-column-gap: 2rem;
   padding: 4rem;
-` */
+}
+
+.root{
+  margin: 4rem;
+}
