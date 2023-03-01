@@ -14,9 +14,8 @@ interface CardList {
 }
 
 function CardList({ data }: CardList) {
-  console.log(data, "data");
   return (
-    <div>
+    <div className={styles.wrapper}>
       <h2 className={styles.root}>Character</h2>
       <div className={styles.container}>
         {data.map((character: CardListProps) => {

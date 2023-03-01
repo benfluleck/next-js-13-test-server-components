@@ -17,13 +17,13 @@ function Card({ id, name, image, species }: CardProps) {
   };
 
   return (
-    <div className={styles.card_content} key={id}>
+    <div key={id}>
       <Image
         src={image}
         alt="image"
         width={300}
         height={300}
-        // priority={getPriority(id)}
+        priority={getPriority(id)}
       />
 
       <p className={styles.card_content}>{name}</p>
