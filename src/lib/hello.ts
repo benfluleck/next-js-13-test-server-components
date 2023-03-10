@@ -6,7 +6,7 @@ import { Character } from "@/app/page";
 
 export async function loadQuestions() {
   // Call an external API endpoint to get posts
-  const res = await fetch("https://polls.apiblueprint.org/questions", { next: { revalidate: 20 } });
+  const res = await fetch("https://polls.apiblueprint.org/questions?page=1", { next: { revalidate: 20 } });
   const data = await res.json();
 
 
@@ -19,7 +19,7 @@ export async function loadQuestions() {
 
 export async function loadCharacters() {
   // Call an external API endpoint to get posts
-  const res = await fetch("https://rickandmortyapi.com/api/character?page=1", { next: { revalidate: 20 } });
+  const res = await fetch("https://rickandmortyapi.com/api/character?page=1");
   const data = await res.json();
 
   const newArray: Character[] = [];
